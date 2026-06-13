@@ -1,1 +1,142 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bia Hanoi Premium AR</title><meta itemprop="name" content="Bia Hanoi Premium AR"><meta name="twitter:title" content="Bia Hanoi Premium AR"><meta property="og:title" content="Bia Hanoi Premium AR"><meta property="og:site_name" content="Bia Hanoi Premium AR"><meta name="description" content="Image target AR effect for a Hanoi Premium beer can."><meta itemprop="description" content="Image target AR effect for a Hanoi Premium beer can."><meta property="og:description" content="Image target AR effect for a Hanoi Premium beer can."><meta name="twitter:description" content="Image target AR effect for a Hanoi Premium beer can."><script crossorigin="anonymous" src="./external/runtime/runtime.js"></script><script src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@1/dist/xr.js" async crossorigin="anonymous" data-preload-chunks="slam"></script><script src="https://cdn.jsdelivr.net/npm/@8thwall/landing-page@1/dist/landing-page.js" crossorigin="anonymous"></script><meta property="og:image" content="./image-targets/bia-hanoi-premium_thumbnail.png"></head><body><script src="bundle.js"></script></body></html>
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bia Hanoi Premium AR</title><meta itemprop="name" content="Bia Hanoi Premium AR"><meta name="twitter:title" content="Bia Hanoi Premium AR"><meta property="og:title" content="Bia Hanoi Premium AR"><meta property="og:site_name" content="Bia Hanoi Premium AR"><meta name="description" content="Image target AR effect for a Hanoi Premium beer can."><meta itemprop="description" content="Image target AR effect for a Hanoi Premium beer can."><meta property="og:description" content="Image target AR effect for a Hanoi Premium beer can."><meta name="twitter:description" content="Image target AR effect for a Hanoi Premium beer can."><link rel="icon" href="data:,"><script crossorigin="anonymous" src="./external/runtime/runtime.js"></script><script src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@1/dist/xr.js" async crossorigin="anonymous" data-preload-chunks="slam"></script><meta property="og:image" content="./image-targets/bia-hanoi-premium_thumbnail.png"><style>body {
+      margin: 0;
+      background: #11132c;
+    }
+
+    #load-debug {
+      position: fixed;
+      inset: 16px;
+      z-index: 999999;
+      display: none;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 20vh;
+      color: #fff;
+      font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      pointer-events: none;
+      text-align: center;
+    }
+
+    #load-debug div {
+      max-width: 340px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .desktop-fallback {
+      min-height: 100vh;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        linear-gradient(110deg, rgba(239, 35, 60, 0.14), transparent 45%),
+        #30334f;
+    }
+
+    .fallback-shell {
+      display: grid;
+      min-height: 100vh;
+      grid-template-columns: minmax(320px, 0.9fr) minmax(280px, 0.7fr);
+      gap: 28px;
+      align-items: center;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    .fallback-panel {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: end;
+      max-width: 760px;
+    }
+
+    .fallback-kicker {
+      margin: 0 0 14px;
+      color: #f7d046;
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .fallback-copy h1 {
+      margin: 0 0 16px;
+      font-size: clamp(36px, 6vw, 72px);
+      line-height: 0.94;
+      letter-spacing: 0;
+    }
+
+    .fallback-copy p {
+      max-width: 440px;
+      margin: 0 0 18px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .fallback-copy a {
+      color: #fff;
+      overflow-wrap: anywhere;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .fallback-qr {
+      width: 260px;
+      min-width: 260px;
+      padding: 14px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .fallback-qr img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .fallback-target {
+      width: min(34vw, 360px);
+      max-height: 88vh;
+      justify-self: center;
+      object-fit: contain;
+      filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.25));
+    }
+
+    @media (max-width: 860px) {
+      .fallback-shell,
+      .fallback-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .fallback-shell {
+        padding: 28px;
+      }
+
+      .fallback-qr {
+        width: 220px;
+        min-width: 220px;
+      }
+
+      .fallback-target {
+        width: min(70vw, 280px);
+      }
+    }</style></head><body><div id="load-debug"><div>Loading AR...</div></div><script>const showLoadDebug = (message) => {
+    const el = document.getElementById('load-debug')
+    if (!el) return
+    el.style.display = 'flex'
+    el.firstElementChild.textContent = message
+  }
+
+  window.addEventListener('error', event => showLoadDebug(event.message || 'Runtime error'))
+  window.addEventListener('unhandledrejection', event => {
+    const reason = event.reason && (event.reason.message || String(event.reason))
+    showLoadDebug(reason || 'Runtime promise error')
+  })
+  window.setTimeout(() => {
+    if (!window.XR8) {
+      showLoadDebug('8th Wall XR script did not load. Check network/CDN/domain.')
+    }
+  }, 8000)</script><script src="bundle.js"></script></body></html>

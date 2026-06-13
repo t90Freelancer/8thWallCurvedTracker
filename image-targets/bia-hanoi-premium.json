@@ -1,27 +1,31 @@
 {
   "imagePath": "image-targets/bia-hanoi-premium_luminance.png",
+  "metadata": null,
+  "name": "bia-hanoi-premium",
+  "type": "CYLINDER",
+  "properties": {
+    "top": 492,
+    "left": 0,
+    "width": 768,
+    "height": 1024,
+    "isRotated": false,
+    "originalWidth": 768,
+    "originalHeight": 2007,
+    "targetCircumferenceTop": 80,
+    "cylinderCircumferenceTop": 207,
+    "cylinderCircumferenceBottom": 207,
+    "cylinderSideLength": 106.66666666666666,
+    "arcAngle": 139.1304347826087,
+    "coniness": 0,
+    "inputMode": "ADVANCED",
+    "unit": "mm"
+  },
   "resources": {
     "originalImage": "bia-hanoi-premium_original.png",
     "croppedImage": "bia-hanoi-premium_cropped.png",
     "thumbnailImage": "bia-hanoi-premium_thumbnail.png",
     "luminanceImage": "bia-hanoi-premium_luminance.png"
   },
-  "name": "bia-hanoi-premium",
-  "type": "PLANAR",
-  "properties": {
-    "top": 0,
-    "left": 0,
-    "width": 295,
-    "height": 771,
-    "isRotated": false,
-    "originalWidth": 295,
-    "originalHeight": 771
-  },
-  "userMetadataIsJson": true,
-  "loadAutomatically": true,
-  "created": 1781322000000,
-  "updated": 1781322000000,
-  "metadata": {
-    "note": "Placeholder target data generated from the supplied image for local builds. For production curved tracking, regenerate this target in 8th Wall Studio as a curved/cylindrical image target and keep the same name."
-  }
+  "created": 1781348371360,
+  "updated": 1781348371360
 }
