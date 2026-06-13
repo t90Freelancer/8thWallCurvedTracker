@@ -4,13 +4,13 @@
   "name": "bia-hanoi-premium",
   "type": "CYLINDER",
   "properties": {
-    "top": 492,
+    "top": 0,
     "left": 0,
     "width": 768,
     "height": 1024,
     "isRotated": false,
     "originalWidth": 768,
-    "originalHeight": 2007,
+    "originalHeight": 1024,
     "targetCircumferenceTop": 80,
     "cylinderCircumferenceTop": 207,
     "cylinderCircumferenceBottom": 207,
@@ -27,5 +27,5 @@
     "luminanceImage": "bia-hanoi-premium_luminance.png"
   },
   "created": 1781348371360,
-  "updated": 1781348371360
+  "updated": 1781350260000
 }
