@@ -25,6 +25,45 @@
       background: rgba(0, 0, 0, 0.5);
     }
 
+    #bia-ar-status {
+      position: fixed;
+      left: max(14px, env(safe-area-inset-left));
+      bottom: max(18px, env(safe-area-inset-bottom));
+      z-index: 999998;
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      max-width: calc(100vw - 28px);
+      padding: 9px 12px;
+      box-sizing: border-box;
+      color: #fff;
+      font: 600 14px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      background: rgba(8, 10, 22, 0.76);
+      backdrop-filter: blur(12px);
+      pointer-events: none;
+    }
+
+    .bia-ar-status-dot {
+      width: 9px;
+      height: 9px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: #f7d046;
+      box-shadow: 0 0 14px rgba(247, 208, 70, 0.85);
+    }
+
+    #bia-ar-status[data-state="found"] .bia-ar-status-dot {
+      background: #23d18b;
+      box-shadow: 0 0 16px rgba(35, 209, 139, 0.95);
+    }
+
+    #bia-ar-status[data-state="lost"] .bia-ar-status-dot {
+      background: #ef233c;
+      box-shadow: 0 0 14px rgba(239, 35, 60, 0.85);
+    }
+
     .desktop-fallback {
       min-height: 100vh;
       color: #fff;
