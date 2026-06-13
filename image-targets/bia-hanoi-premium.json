@@ -6,16 +6,16 @@
   "properties": {
     "top": 0,
     "left": 0,
-    "width": 768,
+    "width": 392,
     "height": 1024,
     "isRotated": false,
-    "originalWidth": 768,
+    "originalWidth": 392,
     "originalHeight": 1024,
-    "targetCircumferenceTop": 80,
+    "targetCircumferenceTop": 66,
     "cylinderCircumferenceTop": 207,
     "cylinderCircumferenceBottom": 207,
-    "cylinderSideLength": 106.66666666666666,
-    "arcAngle": 139.1304347826087,
+    "cylinderSideLength": 172.40816326530611,
+    "arcAngle": 114.78260869565217,
     "coniness": 0,
     "inputMode": "ADVANCED",
     "unit": "mm"
@@ -27,5 +27,5 @@
     "luminanceImage": "bia-hanoi-premium_luminance.png"
   },
   "created": 1781348371360,
-  "updated": 1781432100000
+  "updated": 1781459100000
 }
