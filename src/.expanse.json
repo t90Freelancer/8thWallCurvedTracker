@@ -1,0 +1,335 @@
+{
+  "objects": {
+    "space-root": {
+      "id": "space-root",
+      "name": "Bia Hanoi Premium Scene Root",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0, 1],
+      "scale": [1, 1, 1],
+      "geometry": null,
+      "material": null,
+      "components": {},
+      "order": 0
+    },
+    "camera": {
+      "id": "camera",
+      "name": "Camera",
+      "parentId": "space-root",
+      "position": [0, 4, 6],
+      "rotation": [-0.27984814233312133, 0, 0, 0.9600445961055342],
+      "scale": [1, 1, 1],
+      "geometry": null,
+      "material": null,
+      "camera": {
+        "type": "perspective",
+        "xr": {
+          "desktop": "disabled",
+          "xrCameraType": "world",
+          "headset": "AR",
+          "phone": "AR",
+          "world": {
+            "disableWorldTracking": false
+          }
+        }
+      },
+      "components": {},
+      "order": 1
+    },
+    "ambient-light": {
+      "id": "ambient-light",
+      "name": "Ambient Light",
+      "parentId": "space-root",
+      "position": [0, 2, 1],
+      "rotation": [0, 0, 0, 1],
+      "scale": [1, 1, 1],
+      "geometry": null,
+      "material": null,
+      "light": {
+        "type": "ambient",
+        "intensity": 0.85
+      },
+      "components": {},
+      "order": 2
+    },
+    "key-light": {
+      "id": "key-light",
+      "name": "Key Light",
+      "parentId": "space-root",
+      "position": [2, 3, 3],
+      "rotation": [0, 0, 0, 1],
+      "scale": [1, 1, 1],
+      "geometry": null,
+      "material": null,
+      "light": {
+        "type": "directional",
+        "intensity": 1.8,
+        "castShadow": false
+      },
+      "components": {},
+      "order": 3
+    },
+    "bia-target": {
+      "id": "bia-target",
+      "name": "Bia Hanoi Premium Image Target",
+      "parentId": "space-root",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0, 1],
+      "scale": [1, 1, 1],
+      "geometry": null,
+      "material": null,
+      "imageTarget": {
+        "name": "bia-hanoi-premium"
+      },
+      "components": {
+        "bia-can-effect-component": {
+          "id": "bia-can-effect-component",
+          "name": "Bia Can Effect",
+          "parameters": {
+            "imageTargetName": "bia-hanoi-premium",
+            "effectRoot": {"type": "entity", "id": "effect-root"},
+            "topRing": {"type": "entity", "id": "top-ring"},
+            "bottomRing": {"type": "entity", "id": "bottom-ring"},
+            "halo": {"type": "entity", "id": "halo-ring"},
+            "labelGlow": {"type": "entity", "id": "label-glow"},
+            "sparkleA": {"type": "entity", "id": "sparkle-a"},
+            "sparkleB": {"type": "entity", "id": "sparkle-b"},
+            "sparkleC": {"type": "entity", "id": "sparkle-c"},
+            "sparkleD": {"type": "entity", "id": "sparkle-d"}
+          }
+        }
+      },
+      "order": 4
+    },
+    "effect-root": {
+      "id": "effect-root",
+      "name": "Can Curved Effect Root",
+      "parentId": "bia-target",
+      "position": [0, 0, 0.035],
+      "rotation": [0, 0, 0, 1],
+      "scale": [1, 1, 1],
+      "geometry": null,
+      "material": null,
+      "components": {},
+      "hidden": true,
+      "order": 5
+    },
+    "can-volume": {
+      "id": "can-volume",
+      "name": "Subtle Curved Can Volume",
+      "parentId": "effect-root",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0, 1],
+      "scale": [1, 1, 1],
+      "geometry": {
+        "type": "cylinder",
+        "radius": 0.5,
+        "height": 2.55
+      },
+      "material": {
+        "type": "basic",
+        "color": "#E8F0F5",
+        "opacity": 0.16,
+        "emissiveColor": "#FFFFFF",
+        "emissiveIntensity": 0.35,
+        "side": "double",
+        "blending": "additive",
+        "depthWrite": false,
+        "wireframe": true,
+        "forceTransparent": true
+      },
+      "components": {},
+      "order": 6
+    },
+    "label-glow": {
+      "id": "label-glow",
+      "name": "Red Label Glow",
+      "parentId": "effect-root",
+      "position": [0, 0.1, 0.035],
+      "rotation": [0, 0, 0, 1],
+      "scale": [1, 1, 1],
+      "geometry": {
+        "type": "plane",
+        "width": 1.12,
+        "height": 0.72
+      },
+      "material": {
+        "type": "unlit",
+        "color": "#EF233C",
+        "opacity": 0.26,
+        "side": "double",
+        "blending": "additive",
+        "depthWrite": false,
+        "forceTransparent": true
+      },
+      "components": {},
+      "order": 7
+    },
+    "halo-ring": {
+      "id": "halo-ring",
+      "name": "Front Premium Halo",
+      "parentId": "effect-root",
+      "position": [0, 0, 0.055],
+      "rotation": [0, 0, 0, 1],
+      "scale": [1.03, 2.42, 1],
+      "geometry": {
+        "type": "ring",
+        "innerRadius": 0.45,
+        "outerRadius": 0.48
+      },
+      "material": {
+        "type": "unlit",
+        "color": "#FFFFFF",
+        "opacity": 0.55,
+        "side": "double",
+        "blending": "additive",
+        "depthWrite": false,
+        "forceTransparent": true
+      },
+      "components": {},
+      "order": 8
+    },
+    "top-ring": {
+      "id": "top-ring",
+      "name": "Top Rim Energy",
+      "parentId": "effect-root",
+      "position": [0, 1.18, 0.075],
+      "rotation": [0, 0, 0, 1],
+      "scale": [1.12, 0.22, 1],
+      "geometry": {
+        "type": "ring",
+        "innerRadius": 0.41,
+        "outerRadius": 0.48
+      },
+      "material": {
+        "type": "unlit",
+        "color": "#F7D046",
+        "opacity": 0.8,
+        "side": "double",
+        "blending": "additive",
+        "depthWrite": false,
+        "forceTransparent": true
+      },
+      "components": {},
+      "order": 9
+    },
+    "bottom-ring": {
+      "id": "bottom-ring",
+      "name": "Bottom Rim Energy",
+      "parentId": "effect-root",
+      "position": [0, -1.18, 0.075],
+      "rotation": [0, 0, 0, 1],
+      "scale": [1.12, 0.22, 1],
+      "geometry": {
+        "type": "ring",
+        "innerRadius": 0.41,
+        "outerRadius": 0.48
+      },
+      "material": {
+        "type": "unlit",
+        "color": "#1E5AA8",
+        "opacity": 0.72,
+        "side": "double",
+        "blending": "additive",
+        "depthWrite": false,
+        "forceTransparent": true
+      },
+      "components": {},
+      "order": 10
+    },
+    "sparkle-a": {
+      "id": "sparkle-a",
+      "name": "Sparkle Upper Left",
+      "parentId": "effect-root",
+      "position": [-0.42, 0.78, 0.12],
+      "rotation": [0, 0, 0, 1],
+      "scale": [1, 1, 1],
+      "geometry": {"type": "sphere", "radius": 0.035},
+      "material": {
+        "type": "unlit",
+        "color": "#FFFFFF",
+        "opacity": 0.9,
+        "blending": "additive",
+        "depthWrite": false,
+        "forceTransparent": true
+      },
+      "components": {},
+      "order": 11
+    },
+    "sparkle-b": {
+      "id": "sparkle-b",
+      "name": "Sparkle Upper Right",
+      "parentId": "effect-root",
+      "position": [0.42, 0.68, 0.12],
+      "rotation": [0, 0, 0, 1],
+      "scale": [1, 1, 1],
+      "geometry": {"type": "sphere", "radius": 0.028},
+      "material": {
+        "type": "unlit",
+        "color": "#F7D046",
+        "opacity": 0.9,
+        "blending": "additive",
+        "depthWrite": false,
+        "forceTransparent": true
+      },
+      "components": {},
+      "order": 12
+    },
+    "sparkle-c": {
+      "id": "sparkle-c",
+      "name": "Sparkle Lower Left",
+      "parentId": "effect-root",
+      "position": [-0.38, -0.68, 0.12],
+      "rotation": [0, 0, 0, 1],
+      "scale": [1, 1, 1],
+      "geometry": {"type": "sphere", "radius": 0.026},
+      "material": {
+        "type": "unlit",
+        "color": "#1E5AA8",
+        "opacity": 0.9,
+        "blending": "additive",
+        "depthWrite": false,
+        "forceTransparent": true
+      },
+      "components": {},
+      "order": 13
+    },
+    "sparkle-d": {
+      "id": "sparkle-d",
+      "name": "Sparkle Lower Right",
+      "parentId": "effect-root",
+      "position": [0.38, -0.82, 0.12],
+      "rotation": [0, 0, 0, 1],
+      "scale": [1, 1, 1],
+      "geometry": {"type": "sphere", "radius": 0.03},
+      "material": {
+        "type": "unlit",
+        "color": "#FFFFFF",
+        "opacity": 0.9,
+        "blending": "additive",
+        "depthWrite": false,
+        "forceTransparent": true
+      },
+      "components": {},
+      "order": 14
+    }
+  },
+  "spaces": {
+    "bia-hanoi-space": {
+      "id": "bia-hanoi-space",
+      "name": "Bia Hanoi Premium",
+      "activeCamera": "camera",
+      "reflections": {
+        "type": "url",
+        "url": "https://cdn.8thwall.com/web/assets/envmap/basic_env_map-m9hqpneh.jpg"
+      }
+    }
+  },
+  "entrySpaceId": "bia-hanoi-space",
+  "runtimeVersion": {
+    "type": "version",
+    "level": "major",
+    "major": 2,
+    "minor": 0,
+    "patch": 0
+  }
+}
