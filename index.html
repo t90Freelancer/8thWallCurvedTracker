@@ -133,8 +133,8 @@
         if (!window.WebAssembly || !biaHanoiWebGL2Supported) {
           biaHanoiShowCompatibilityError("Trinh duyet nay khong ho tro du WebGL2/WebAssembly de chay AR. Hay cap nhat Safari/iOS hoac thu Chrome.");
         }
-        config.webglContextAttributes = { preserveDrawingBuffer: false, powerPreference: "high-performance", antialias: false, failIfMajorPerformanceCaveat: false };
-        config.devicePixelRatio = Math.min(window.devicePixelRatio || 1, (biaHanoiIsSafari || biaHanoiIsIOS) ? 1 : 1.25);
+        config.webglContextAttributes = { preserveDrawingBuffer: false, powerPreference: "high-performance", antialias: true, failIfMajorPerformanceCaveat: false };
+        config.devicePixelRatio = Math.min(Math.max(window.devicePixelRatio || 1, 1), 2);
         config.cacheControl = function () { return (biaHanoiIsSafari || biaHanoiIsIOS) ? "must-revalidate" : "immutable"; };
         createUnityInstance(canvas, config, (progress) => {
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
