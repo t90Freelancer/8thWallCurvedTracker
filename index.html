@@ -59,7 +59,7 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/BiaHanoiAR.loader.js";
         // BIA_HANOI_CACHE_BUST_PATCH
-        var biaHanoiBuildVersion = "1782274777746";
+        var biaHanoiBuildVersion = "1782275812592";
         function biaHanoiCacheBustUrl(url) {
           if (!url || /^(data|blob):/i.test(url)) return url;
           return url + (url.indexOf("?") === -1 ? "?" : "&") + "v=" + encodeURIComponent(biaHanoiBuildVersion);
